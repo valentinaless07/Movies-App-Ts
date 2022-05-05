@@ -58,24 +58,127 @@
       
   }
 
-  .image_container > div > h3{
+  .carousel_summer_container > h3{
     font-weight: 600;
-    font-size: 30px;
-    margin: 10px;
+    font-size: 28px;
+    margin: 5px;
   }
 
-  .image_container > div > p{
+  .carousel_summer_container > p{
     font-weight: 300;
     font-size: 10px;
-    padding: 0px 20px;
+    padding: 0px 30px;
     margin: 0;
   }
 
   .stars_container > img{
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
   }
 
   .stars_container{
     display: flex;
+  }
+
+  .swiper-pagination-bullet{
+    background-color: #fff;
+  }
+
+  .swiper-button-next, .swiper-button-prev{
+    color: #fff;
+  }
+
+  .carousel_summer_container{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @media (min-width: 370px) {
+    .carousel_summer_container > h3{
+      font-size: 28px;
+      margin-top: 10px;
+    }
+  
+    .carousel_summer_container > p{
+      font-size: 14px;
+      padding: 0px 40px;
+      margin-top: 5px;
+    }
+    .carousel_summer_container{
+      justify-content: flex-start;
+    }
+   
+  }
+
+  @media (min-width: 425px) {
+    .carousel_summer_container > h3{
+      font-size: 34px;
+    }
+  
+    .carousel_summer_container > p{
+      font-size: 18px;
+    }
+
+    .stars_container > img{
+      width: 28px;
+      height: 28px;
+    }
+    .carousel_summer_container{
+      justify-content: flex-start;
+    }
+  }
+
+
+
+  @media (min-width: 550px) {
+    .carousel_summer_container > h3{
+      font-size: 38px;
+      margin-top: 25px;
+    }
+  
+    .carousel_summer_container > p{
+      font-size: 22px;
+    }
+  }
+
+  @media (min-width: 600px) {
+    .carousel_summer_container > h3{
+      font-size: 41px;
+      margin-top: 35px;
+    }
+  
+    .carousel_summer_container > p{
+      font-size: 26px;
+    }
+  }
+
+
+  @media (min-width: 700px) {
+    .carousel_summer_container > h3{
+      font-size: 45px;
+    }
+  
+    .carousel_summer_container > p{
+      font-size: 29px;
+    }
+
+    .stars_container > img{
+      width: 30px;
+      height: 30px;
+    }
+  
+  }
+
+  @media (min-width: 1000px) {
+    .carousel_summer_container{
+      justify-content: center;
+      height: 400px;
+    }
+
+    .stars_container > img{
+      width: 35px;
+      height: 35px;
+    }
   }
