@@ -1,0 +1,41 @@
+.movies > div > img{
+    width: 200px;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.movies {
+    display: grid;
+    margin-top: 2rem;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+.h2{
+    text-align: center;
+    color: white;
+}
+
+@media (min-width: 600px) {
+    .movies{
+
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (min-width: 1000px) {
+    .movies{
+        grid-gap: 4rem;
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+
+@media (min-width: 1200px) {
+    .movies{
+
+        grid-template-columns: repeat(4, 1fr); 
+    }
+}

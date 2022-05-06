@@ -2,10 +2,13 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import Carousel from "./components/Carousel"
 import "./App.css";
+import Movies from './components/Movies';
+import { Movie } from './types';
 
 function App() {
 
-  const [movies, setMovies] = useState<Array<object>>([])
+
+  const [movies, setMovies] = useState<Array<Movie>>([])
 
   useEffect( () => {
     const getMovies = async () => {
@@ -22,14 +25,20 @@ function App() {
     
   }, [])
 
+ 
+
   
 
   return (
     <div className="App">
       <Carousel/>
+      <Movies movies={movies}/>
+
      
     </div>
   )
+ 
 }
 
 export default App
+
