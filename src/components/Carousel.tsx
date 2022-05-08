@@ -9,6 +9,8 @@ import "./styles/Carousel.css"
 
 const Carousel = () => {
   return (
+
+    // Carousel utilizando la librería swiper
     <div className='swiper_container'>
     <Swiper
       cssMode={true}

@@ -11,6 +11,9 @@ function App() {
   const [movies, setMovies] = useState<Array<Movie>>([])
 
   useEffect( () => {
+
+    // Petición de las películas más populares actualmente
+
     const getMovies = async () => {
       // const {data} = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${import.meta.env.VITE_API_KEY}`)
       // setMovies(data.results)
