@@ -1,3 +1,4 @@
 export interface Movie  {
-    poster_path: string
+    poster_path: string,
+    title: string
   }
