@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import Carousel from "./components/Carousel"
 import "./App.css";
-import Movies from './components/Movies';
 import { Movie } from './types';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import MovieDetail from "./components/MovieDetail"
+import Home from './components/Home';
 
 function App() {
 
@@ -47,11 +48,17 @@ function App() {
 
   return (
     <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home popularMovies={popularMovies} latestMovies={latestMovies} topMovies={topMovies}/>} />
+            
+        
+        
+        <Route path="/movie/:id" element={<MovieDetail/>}/>
+        </Routes>
+      </BrowserRouter>
       
-      <Carousel/>
-      <Movies movies={popularMovies} title={"trendings"}/>
-      <Movies movies={latestMovies} title={"latest"}/>
-      <Movies movies={topMovies} title={"top"}/>
+    
 
      
     </div>

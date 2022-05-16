@@ -1,5 +1,6 @@
 import { Movie } from "../types"
 import styles from "./styles/Movies.module.css"
+import {useNavigate} from "react-router-dom"
 
 
 type MoviesArgs = {
@@ -9,7 +10,11 @@ type MoviesArgs = {
 
 const Movies = (args: MoviesArgs) => {
   
-  
+  const navigate = useNavigate()
+
+  const toDetail = (id: any) => {
+    navigate(`/movie/${id}`)
+  }
 
   return (
     <>
@@ -21,12 +26,14 @@ const Movies = (args: MoviesArgs) => {
     <div className={styles.movies}>
       
       {
-        args.movies.map((movie:Movie) => <div>
-          <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}/>
-          <p>{movie.title}</p>
+        args.movies.map((movie:Movie) => <div key={movie.id}>
+          <div className={styles.movie_img}>
+          <img onClick={() => toDetail(movie.id)} src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}/>
           <div className={styles.year}>
-            2022
+            {movie.release_date.slice(0,4)}
           </div>  
+          </div>  
+          <p onClick={() => toDetail(movie.id)}>{movie.title}</p>
         </div>)
       }
       </div>
