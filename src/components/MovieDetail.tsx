@@ -4,7 +4,8 @@ import axios from "axios"
 import styles from "./styles/MovieDetail.module.css"
 import StarFill from "../../assets/StarFill.svg"
 import HomeIcon from "../../assets/Home.svg"
-
+import Loading from "./Loading"
+import defaultImage from "../../assets/default_image.jpg"
 
 
 const Detail = () => {
@@ -58,17 +59,15 @@ const Detail = () => {
 
       <h2>{detail.title}</h2>
 
-      <p>{detail.tagline}</p>
+      <p className={styles.tagline}>{detail.tagline}</p>
 
-      <img src={`https://image.tmdb.org/t/p/w500/${detail.poster_path}`} alt={detail.title} />
+      <img src={detail.poster_path ? `https://image.tmdb.org/t/p/w500/${detail.poster_path}` : defaultImage} alt={detail.title} />
 
       <p className={styles.overview}>{detail.overview}</p>
       
     </div>
     : 
-    <div className={styles.lds_container}>
-    <div className={styles.lds_ring}><div></div><div></div><div></div><div></div></div>
-    </div>
+      <Loading/>
 }
     </>
   )

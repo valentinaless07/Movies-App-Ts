@@ -1,0 +1,23 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    
+    
+  }
+
+  .icon_container{
+      display: flex;
+      justify-content: flex-end;
+      padding: 5px;
+  }
+
+
+  
+  .nav > .icon_container > img{
+    cursor: pointer;
+   width: 28px;
+   height: 28px;
+  }
+  

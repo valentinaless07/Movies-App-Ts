@@ -5,6 +5,7 @@ import { Movie } from './types';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import MovieDetail from "./components/MovieDetail"
 import Home from './components/Home';
+import SearchMovies from './components/SearchMovies';
 
 function App() {
 
@@ -51,10 +52,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home popularMovies={popularMovies} latestMovies={latestMovies} topMovies={topMovies}/>} />
-            
-        
-        
-        <Route path="/movie/:id" element={<MovieDetail/>}/>
+          <Route path="/movie/:id" element={<MovieDetail/>}/>
+          <Route path="/search/:query" element={<SearchMovies/>}/>
+          
         </Routes>
       </BrowserRouter>
       

@@ -1,0 +1,43 @@
+.search_container{
+    height: 90px;
+    width: 95%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.search_container > form{
+    position: relative;
+    height: auto;
+    width: auto;
+}
+
+.search_container > form > input {
+    width: 250px;
+    height: 28px;
+    background: none;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    padding: 3px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.search_container > form > input::placeholder {
+    color: white;
+    padding: 2px;
+}
+
+.search_container > form > input:focus{
+    border: 1px solid white;
+    outline: none;
+}
+
+
+.search_container > form >  img{
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    cursor: pointer;
+}
+
