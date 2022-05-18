@@ -2,6 +2,7 @@ import Movies from './Movies';
 import Carousel from "./Carousel"
 import { Movie } from '../types';
 import Searchbar from './Searchbar';
+import Loading from './Loading';
 
 
 type HomeArgs = {
@@ -16,9 +17,15 @@ const Home = (args: HomeArgs) => {
     <div>
          <Carousel/>
          <Searchbar/>
-        <Movies movies={args.popularMovies} title={"trendings"} query={undefined}/>
-        <Movies movies={args.latestMovies} title={"latest"} query={undefined}/>
-        <Movies movies={args.topMovies} title={"top"} query={undefined}/>
+         {
+           args.popularMovies.length > 0 ?
+           <>
+           <Movies movies={args.popularMovies} title={"trendings"} query={undefined}/>
+           <Movies movies={args.latestMovies} title={"latest"} query={undefined}/>
+           <Movies movies={args.topMovies} title={"top"} query={undefined}/>
+           </>
+          : <Loading/>
+         }
     </div>
   )
 }

@@ -39,7 +39,9 @@ const SearchMovies = () => {
 
         <img onClick={() => navigate("/")} src={HomeIcon} alt="home" />
         </div>
-      <Searchbar/>
+        <div className={styles.searchbar_container}>
+        <Searchbar/>
+        </div>
       </div>
       {
         loading ?
