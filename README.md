@@ -12,7 +12,7 @@
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/valentinaless07/challenge-frontend-ego
+   git clone https://github.com/valentinaless07/Movies-App-Ts
    ```
 2. Install NPM packages
    ```sh
